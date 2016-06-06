@@ -2,9 +2,11 @@
 
 NYC street trees rendered dynamically in the landscape architecture hand-drawn tree plan view style.
 
-<img width="831" alt="screenshot" src="https://cloud.githubusercontent.com/assets/2553268/15829323/3e80a786-2be1-11e6-83bc-97a6d8f2c982.png">
+[<img width="831" alt="screenshot" src="https://cloud.githubusercontent.com/assets/2553268/15829323/3e80a786-2be1-11e6-83bc-97a6d8f2c982.png">](http://louh.github.io/nyc-trees)
 
-This was a prototype built during the [NYC TreesCount! Data Jam](https://www.eventbrite.com/e/treescount-data-jam-registration-25235073785) on June 4, 20160.
+Link: http://louh.github.io/nyc-trees
+
+This was a prototype built during the [NYC TreesCount! Data Jam](https://www.eventbrite.com/e/treescount-data-jam-registration-25235073785) on June 4, 2016.
 
 The data is a subset of the [2015 Tree Census dataset](https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35), to keep load times and memory footprint smaller. I extracted only the Gramercy Park neighborhood using Chris Whong's [NYC 2015 Street Trees Data Downloader](http://chriswhong.github.io/tree-data-downloader/).
 
