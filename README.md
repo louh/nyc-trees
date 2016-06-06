@@ -17,3 +17,5 @@ The map is rendered with [Leaflet](http://leafletjs.com/), [Tangram](https://map
 The tree artwork was purchased from [Shutterstock](http://www.shutterstock.com/pic-370545008.html), with a perpetual, worldwide license for unlimited digital reproductions. It is appropriate here, but should not be re-used if this project evolves. I have not included the original JPEG file here only because it is so large.
 
 <img width="1398" alt="wip in tangram play" src="https://cloud.githubusercontent.com/assets/2553268/15829331/4d50b0bc-2be1-11e6-8c2b-8159d40d447a.png">
+
+[View this in Tangram Play!](https://mapzen.com/tangram/play/?scene=https%3A%2F%2Fcdn.rawgit.com%2Flouh%2Fnyc-trees%2Fb00493901878d130baf7c3b40fc83eccdd523f62%2Fassets%2Ftrees.yaml#18.31666666666669/40.73704/-73.98515) (Interactivity on the tree features are enabled there!)
