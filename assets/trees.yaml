@@ -1,0 +1,82 @@
+import: https://mapzen.com/carto/refill-style/2.0/refill-style.yaml
+
+sources:
+    trees:
+        type: GeoJSON
+        url: gramercy-park-trees.geojson
+
+cameras:
+    perspective:
+        type: flat
+
+textures:
+    canopies:
+        url: trees_transparent.png
+        filtering: mipmap
+        sprites:
+            # define sprites: [x origin, y origin, width, height]
+            generic: [1280, 0, 256, 256]
+            american-elm: [1024, 768, 256, 256]
+            american-hornbeam: [768, 1280, 256, 256]
+            american-linden: [768, 768, 256, 256]
+            bald-cypress: [0, 1280, 256, 256]
+            black-cherry: [0, 0, 256, 256] #undefined
+            black-locust: [1280, 768, 256, 256]
+            black-oak: [256, 512, 256, 256]
+            callery-pear: [0, 0, 256, 256] #undefined
+            cherry: [0, 768, 256, 256]
+            crabapple: [0, 256, 256, 256]
+            dawn-redwood: [0, 768, 256, 256]
+            european-hornbeam: [1024, 1024, 256, 256]
+            ginkgo: [256, 0, 256, 256]
+            golden-raintree: [1280, 768, 256, 256]
+            green-ash: [256, 1280, 256, 256]
+            honeylocust-var-inermis: [768, 256, 256, 256]
+            japanese-treelilac: [256, 512, 256, 256]
+            japanese-zelkova: [256, 768, 256, 256]
+            katsura-tree: [768, 256, 256, 256]
+            kentucky-coffeetree: [512, 256, 256, 256]
+            little-leaf-linden: [1024, 768, 256, 256]
+            london-planetree: [0, 256, 256, 256]
+            maackia: [256, 256, 256, 256]
+            mimosa: [256, 256, 256, 256]
+            mulberry: [0, 0, 256, 256] #undefined
+            northern-red-oak: [0, 512, 256, 256]
+            pin-oak: [0, 256, 256, 256]
+            red-maple: [0, 768, 256, 256]
+            river-birch: [768, 1280, 256, 256]
+            sawtooth-oak: [512, 1280, 256, 256]
+            schubert-cherry: [0, 512, 256, 256] #undefined
+            serviceberry: [0, 768, 256, 256]
+            shingle-oak: [512, 1024, 256, 256]
+            silver-linden: [1024, 0, 256, 256]
+            sophora: [0, 0, 256, 256] #undefined
+            swamp-white-oak: [512, 1280, 256, 256]
+            sweetgum: [256, 1280, 256, 256]
+            willow-oak: [768, 1024, 256, 256]
+            _unnamed: [1280, 1280, 256, 256]
+
+styles:
+    icons:
+        base: points
+        texture: canopies
+        blend: overlay
+
+layers:
+    trees:
+        data: { source: trees}
+        draw:
+            icons:
+                sprite: |
+                    function() {
+                        var name = feature.spc_common.trim();
+                        if (name === '') return '_unnamed';
+                        else return name.toLowerCase().replace(/\s/g, '-').replace(/\./g, '')
+                    }
+                sprite_default: generic
+                size: |
+                    function () {
+                        return Math.log(feature.tree_dbh) * 10 / $meters_per_pixel;
+                    }
+                interactive: true
+                collide: false
