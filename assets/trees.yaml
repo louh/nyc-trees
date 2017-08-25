@@ -1,5 +1,8 @@
 import: https://mapzen.com/carto/refill-style/refill-style.yaml
 
+global:
+    sdk_mapzen_api_key: mapzen-Qrrft8H
+
 sources:
     trees:
         type: GeoJSON
